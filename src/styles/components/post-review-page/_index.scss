@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use '../../variables/breakpoints';
+
+.post-review-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 3rem;
+  padding-inline: 1rem;
+  background-color: var(--light-grayish-blue);
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'mobile-lg')) {
+    & {
+      padding-inline: 3rem;
+    }
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'desktop')) {
+    & {
+      padding-inline: 6rem;
+    }
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'desktop-lg')) {
+    & {
+      padding-inline: 9rem;
+    }
+  }
+}
